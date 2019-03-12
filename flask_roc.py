@@ -54,7 +54,7 @@ api.add_resource(ROC, '/<string:preprocessing>/<float:c>')
 
 if __name__ == '__main__':
     # load data
-    url = 'https://raw.githubusercontent.com/velej/ClientServer/master/data/transfusion.data'
+    url = 'https://raw.githubusercontent.com/velej/velej.github.io/master/data/transfusion.data'
     df = pd.read_csv(url)
     df.columns = ['R','F','M','T','Donated']
     xDf = df.loc[:, df.columns != 'Donated']
