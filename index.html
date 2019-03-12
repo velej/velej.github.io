@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html> 
+<!--The above is necessary so the code works and this is how to note -->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Client-Server Visualization and Modeling</title>
+		<script src='https://d3js.org/d3.v4.min.js'></script>
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet" type="text/css">
+		<link href="styles/style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<h1> Client-Server Visualization and Modeling</h1>
+		
+		<p>To demonstrate the RFMTC marketing model (a modified version of RFM), this study adopted the donor database of Blood Transfusion Service Center in Hsin-Chu City in Taiwan. The center passes their blood transfusion service bus to one university in Hsin-Chu City to gather blood donated about every three months. To build a FRMTC model, we selected 748 donors at random from the donor database. These 748 donor data, each one included R (Recency - months since last donation), F (Frequency - total number of donation), M (Monetary - total blood donated in c.c.), T (Time - months since first donation), and a binary variable representing whether he/she donated blood in March 2007 (1 stand for donating blood; 0 stands for not donating blood).</p>
+
+		<p class="Test"> The following image below is generated using a logarithmic regression model. In order to properly execute the visualization, the user needs to specify a preprocessing method and hyper parameter C. The preprocessing methods considered are Standardization and Min-Max Scale. If input inproperly the default is none. For Hyperparameter C, the model expects float format such as 0.01 and 1.00.</p>
+
+		<select id="preprocessing">
+		  <option value="standardize">Standardize</option>
+		  <option value="minmax_scale">Min-Max Scaling</option>
+		  <option value="none">None</option>
+		</select>
+		<br>
+		<input type="text" id="CValue" value= 1.00>
+		<h2> ROC Curve for Blood Transfusion  </h2>
+
+		<div id="option">
+		    <input name="updateButton" 
+		           type="button" 
+		           value="Update" 
+		           onclick="updateData()" />
+		</div>
+
+		<script src="scripts/main.js"></script>
+	<body>
+<html>
+
